@@ -183,8 +183,8 @@ password=profiler,prefix=sparkapp,tagMapping=spark"
   spark_cmd+=(--jars)
   spark_cmd+=("${jars}")
 
-  spark_args+=(--driver-java-options)
-  spark_args+=("${driver_java_opts}")
+  spark_cmd+=(--driver-java-options)
+  spark_cmd+=("${driver_java_opts}")
 
   if [ -z ${executor_java_opts_patched+x} ]; then
     spark_cmd+=(--conf)
